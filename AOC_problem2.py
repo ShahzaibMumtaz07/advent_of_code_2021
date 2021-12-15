@@ -1004,7 +1004,6 @@ forward 9
 def AOC_problem_2_1(arr):
 
     # Preprocess the data
-    counter = 0
     if arr:
         arr = [tuple(i.split()) for i in arr.strip().split('\n')]
 
@@ -1015,15 +1014,11 @@ def AOC_problem_2_1(arr):
     # Filter out the 'up' and 'down' directions and sum up the vetical positions
     y_pos = sum([int(i[1]) if i[0] == 'down' else  int(i[1]) * -1 for i in arr if i[0] in ['up','down']]) # multiplying by -1 to decrease
 
-    # Compute the count by increasing
-    # counter only when current_sum (i) > previous_sum (temp)
-    
     # Return the product
     return h_pos * y_pos
 
 def AOC_problem_2_2(arr):
     # Preprocess the data
-    counter = 0
     if arr:
         arr = [tuple(i.split()) for i in arr.strip().split('\n')]
 
